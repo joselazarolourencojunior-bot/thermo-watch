@@ -229,11 +229,12 @@
     <script>
         console.log('Script loaded');
         console.log('window.supabase:', window.supabase);
+        let supabase;
         try {
             // Initialize Supabase
             const { createClient } = window.supabase;
             console.log('createClient:', createClient);
-            const supabase = createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
+            supabase = createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
             console.log('Supabase client:', supabase);
             console.log('Supabase initialized');
         } catch (err) {
