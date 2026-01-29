@@ -230,7 +230,8 @@
         console.log('Script loaded');
         try {
             // Initialize Supabase
-            const supabase = window.supabase.createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
+            const { createClient } = window.supabase;
+            const supabase = createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
             console.log('Supabase initialized');
         } catch (err) {
             console.error('Failed to initialize Supabase:', err);
