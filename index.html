@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thermo Watch - Monitoramento Inteligente</title>
     <link rel="stylesheet" href="style.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF76HgJNTNqtpMzAmEVmBqna-hy5k1lWI&callback=initMap"></script>
 </head>
 <body>
     <header>
@@ -18,6 +19,7 @@
                     <li><a href="#recursos">Recursos</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#parceiros">Parceiros</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -105,6 +107,13 @@
                     <p>O Thermo Watch é uma solução completa de monitoramento de temperatura desenvolvida para atender às necessidades de empresas e indivíduos que precisam de controle preciso sobre suas condições ambientais.</p>
                     <p>Com tecnologia de ponta e interface intuitiva, oferecemos a melhor experiência em monitoramento térmico do mercado.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="parceiros" class="partners">
+            <div class="container">
+                <h2 class="section-title">Nossos Parceiros</h2>
+                <div id="map" style="height: 400px; width: 100%;"></div>
             </div>
         </section>
 
@@ -283,6 +292,49 @@
                 alert('Erro ao inscrever na newsletter.');
             }
         });
+
+        // Initialize Google Map
+        async function initMap() {
+            // Center the map on Ribeirão Preto, SP
+            const ribeiraoPreto = { lat: -21.1783, lng: -47.8065 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: ribeiraoPreto,
+            });
+
+            // Fetch partners from Supabase
+            try {
+                const { data: partners, error } = await supabase
+                    .from('partners')
+                    .select('name, lat, lng');
+                if (error) throw error;
+
+                // Add markers for each partner
+                partners.forEach(partner => {
+                    new google.maps.Marker({
+                        position: { lat: partner.lat, lng: partner.lng },
+                        map: map,
+                        title: partner.name,
+                    });
+                });
+            } catch (err) {
+                console.error('Error fetching partners:', err);
+                // Fallback to example partners if table doesn't exist
+                const fallbackPartners = [
+                    { lat: -21.1783, lng: -47.8065, title: 'Thermo Watch - Ribeirão Preto' },
+                    { lat: -21.1378, lng: -47.9908, title: 'Parceiro 1 - Sertãozinho' },
+                    { lat: -20.8197, lng: -49.3794, title: 'Parceiro 2 - São José do Rio Preto' },
+                    { lat: -22.9068, lng: -47.0616, title: 'Parceiro 3 - Campinas' },
+                ];
+                fallbackPartners.forEach(partner => {
+                    new google.maps.Marker({
+                        position: { lat: partner.lat, lng: partner.lng },
+                        map: map,
+                        title: partner.title,
+                    });
+                });
+            }
+        }
     </script>
 </body>
 </html>

@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('.'));
 
 // Supabase connection
 const supabaseUrl = 'https://qanyszslnactgtzpmtyj.supabase.co';

@@ -243,6 +243,17 @@ header {
     color: #4b5563;
 }
 
+/* Partners Section */
+.partners {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+#map {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
 /* Contact Section */
 .contact {
     padding: 80px 0;
