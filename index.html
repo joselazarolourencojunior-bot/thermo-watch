@@ -225,9 +225,13 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
+        // Initialize Supabase
+        const supabase = window.supabase.createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
+
         // Handle contact form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             const formData = new FormData(this);
             const data = {
@@ -236,45 +240,35 @@
                 phone: formData.get('phone'),
                 message: formData.get('message')
             };
-            fetch('/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                if (data.success) {
-                    this.reset();
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Erro ao enviar mensagem. Tente novamente.');
-            });
+            try {
+                const { error } = await supabase
+                    .from('contacts')
+                    .insert([data]);
+                if (error) throw error;
+                alert('Mensagem enviada com sucesso!');
+                this.reset();
+            } catch (err) {
+                console.error('Error:', err);
+                alert('Erro ao enviar mensagem.');
+            }
         });
 
         // Handle newsletter form submission
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             const formData = new FormData(this);
             const data = { email: formData.get('email') };
-            fetch('/newsletter', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.message);
-                if (data.success) {
-                    this.reset();
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Erro ao inscrever na newsletter. Tente novamente.');
-            });
+            try {
+                const { error } = await supabase
+                    .from('newsletter_subscribers')
+                    .insert([data], { onConflict: 'email' });
+                if (error) throw error;
+                alert('Inscrito com sucesso na newsletter!');
+                this.reset();
+            } catch (err) {
+                console.error('Error:', err);
+                alert('Erro ao inscrever na newsletter.');
+            }
         });
     </script>
 </body>
