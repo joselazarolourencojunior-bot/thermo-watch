@@ -483,6 +483,251 @@ footer {
     }
 }
 
+/* Social Media Section (Instagram + TikTok) */
+.social-media-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 0;
+    color: var(--white);
+}
+
+.social-media-section .section-title {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.social-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+.social-platform {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.social-platform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-platform {
+    border: 2px solid rgba(225, 48, 108, 0.3);
+}
+
+.tiktok-platform {
+    border: 2px solid rgba(0, 242, 234, 0.3);
+}
+
+.platform-header {
+    margin-bottom: 2rem;
+}
+
+.platform-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.platform-profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-pic {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.tiktok-pic {
+    background: linear-gradient(45deg, #00f2ea, #ff0050);
+}
+
+.platform-info {
+    flex: 1;
+}
+
+.platform-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.platform-info p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.tiktok-btn {
+    background: linear-gradient(45deg, #00f2ea, #ff0050);
+}
+
+.follow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+    font-size: 1.3rem;
+}
+
+.platform-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.social-post {
+    position: relative;
+    aspect-ratio: 9/16;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-post:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.social-post .post-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+}
+
+.social-post .post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-post:hover .post-overlay {
+    opacity: 1;
+}
+
+.social-post .post-overlay span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-cta {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.social-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--white);
+}
+
+.instagram-visit {
+    background: linear-gradient(45deg, #405de6, #c13584);
+}
+
+.tiktok-visit {
+    background: linear-gradient(45deg, #00f2ea, #ff0050);
+}
+
+.visit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.social-links .instagram-link {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-links .instagram-link:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.social-links .tiktok-link {
+    background: linear-gradient(45deg, #00f2ea 0%, #ff0050 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-links .tiktok-link:hover {
+    transform: scale(1.2) rotate(-5deg);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -527,4 +772,144 @@ footer {
     .social-links {
         justify-content: center;
     }
+
+    /* Social Media Section Mobile */
+    .platform-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .platform-info {
+        text-align: center;
+    }
+
+    .platform-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .platform-feed {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .social-post .post-image {
+        font-size: 3rem;
+    }
+
+    .platform-profile-pic {
+        width: 75px;
+        height: 75px;
+        font-size: 2.3rem;
+    }
+
+    .social-platform {
+        padding: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .visit-btn {
+        width: 100%;
+    }
+
+    .social-intro {
+        font-size: 1rem;
+    }
+
+    /* WhatsApp Float Mobile */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* WhatsApp Link Hover Effect */
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white !important;
+    border-radius: 25px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.whatsapp-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+}
+
+.whatsapp-link:active {
+    transform: translateY(0);
 }

@@ -20,6 +20,7 @@
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#parceiros">Parceiros</a></li>
+                    <li><a href="#social">Redes Sociais</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
@@ -113,7 +114,12 @@
         <section id="parceiros" class="partners">
             <div class="container">
                 <h2 class="section-title">Nossos Parceiros</h2>
-                <div id="map" style="height: 400px; width: 100%;"></div>
+                <div id="map" style="height: 500px; width: 100%; min-height: 500px; background: #e5e7eb; border-radius: 10px; position: relative;">
+                    <div id="map-loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #2563eb; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px;"></div>
+                        <p style="color: #666; font-size: 16px;">Carregando mapa...</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -133,8 +139,16 @@
                         <div class="info-item">
                             <span class="info-icon">📱</span>
                             <div>
-                                <strong>Telefone</strong>
-                                <p>+55 16 997902081</p>
+                                <strong>Telefone / WhatsApp</strong>
+                                <p>
+                                    <a href="tel:+5516997902081" style="color: #2563eb; text-decoration: none;">+55 16 997902081</a><br>
+                                    <a href="https://wa.me/5516997902081?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Thermo%20Watch" 
+                                       target="_blank" 
+                                       class="whatsapp-link" 
+                                       style="color: #25d366; text-decoration: none; font-weight: 600;">
+                                        💬 Enviar mensagem WhatsApp
+                                    </a>
+                                </p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -171,6 +185,107 @@
             </div>
         </section>
 
+        <section id="social" class="social-media-section">
+            <div class="container">
+                <h2 class="section-title">🌐 Siga-nos nas Redes Sociais</h2>
+                <p class="social-intro">Acompanhe nosso conteúdo exclusivo no Instagram e TikTok!</p>
+                
+                <!-- Instagram -->
+                <div class="social-platform instagram-platform">
+                    <div class="platform-header">
+                        <div class="platform-profile">
+                            <div class="platform-profile-pic instagram-pic">📷</div>
+                            <div class="platform-info">
+                                <h3>Instagram @thermo.watch</h3>
+                                <p>Dicas, novidades e conteúdos visuais</p>
+                                <a href="https://www.instagram.com/thermo.watch?igsh=MTFkNDNxcWpiMjVtOA==" target="_blank" class="follow-btn instagram-btn" id="followInstagramBtn">
+                                    <span class="social-icon">📷</span>
+                                    Seguir no Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-feed">
+                        <div class="social-post instagram-post" data-platform="instagram">
+                            <div class="post-image">📊</div>
+                            <div class="post-overlay">
+                                <span>❤️ Ver no Instagram</span>
+                            </div>
+                        </div>
+                        <div class="social-post instagram-post" data-platform="instagram">
+                            <div class="post-image">🌡️</div>
+                            <div class="post-overlay">
+                                <span>❤️ Ver no Instagram</span>
+                            </div>
+                        </div>
+                        <div class="social-post instagram-post" data-platform="instagram">
+                            <div class="post-image">📈</div>
+                            <div class="post-overlay">
+                                <span>❤️ Ver no Instagram</span>
+                            </div>
+                        </div>
+                        <div class="social-post instagram-post" data-platform="instagram">
+                            <div class="post-image">⚡</div>
+                            <div class="post-overlay">
+                                <span>❤️ Ver no Instagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok -->
+                <div class="social-platform tiktok-platform">
+                    <div class="platform-header">
+                        <div class="platform-profile">
+                            <div class="platform-profile-pic tiktok-pic">🎵</div>
+                            <div class="platform-info">
+                                <h3>TikTok @thermo.watch</h3>
+                                <p>Vídeos curtos, tutoriais e tendências</p>
+                                <a href="https://www.tiktok.com/@thermo.watch" target="_blank" class="follow-btn tiktok-btn" id="followTikTokBtn">
+                                    <span class="social-icon">🎵</span>
+                                    Seguir no TikTok
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="platform-feed">
+                        <div class="social-post tiktok-post" data-platform="tiktok">
+                            <div class="post-image">🎬</div>
+                            <div class="post-overlay">
+                                <span>▶️ Ver no TikTok</span>
+                            </div>
+                        </div>
+                        <div class="social-post tiktok-post" data-platform="tiktok">
+                            <div class="post-image">🔥</div>
+                            <div class="post-overlay">
+                                <span>▶️ Ver no TikTok</span>
+                            </div>
+                        </div>
+                        <div class="social-post tiktok-post" data-platform="tiktok">
+                            <div class="post-image">💫</div>
+                            <div class="post-overlay">
+                                <span>▶️ Ver no TikTok</span>
+                            </div>
+                        </div>
+                        <div class="social-post tiktok-post" data-platform="tiktok">
+                            <div class="post-image">🚀</div>
+                            <div class="post-overlay">
+                                <span>▶️ Ver no TikTok</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-cta">
+                    <p>🌟 Siga-nos em todas as plataformas e não perca nenhuma novidade!</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.instagram.com/thermo.watch?igsh=MTFkNDNxcWpiMjVtOA==" target="_blank" class="visit-btn instagram-visit">📷 Instagram</a>
+                        <a href="https://www.tiktok.com/@thermo.watch" target="_blank" class="visit-btn tiktok-visit">🎵 TikTok</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="newsletter">
             <div class="container">
                 <div class="newsletter-content">
@@ -192,8 +307,9 @@
                     <h4>🌡️ Thermo Watch</h4>
                     <p>Monitoramento de temperatura inteligente e confiável para o seu negócio.</p>
                     <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
-                        <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                        <a href="https://www.facebook.com/Easycharge" target="_blank" title="Facebook">📘</a>
+                        <a href="https://www.instagram.com/thermo.watch?igsh=MTFkNDNxcWpiMjVtOA==" target="_blank" title="Instagram" class="instagram-link">📷</a>
+                        <a href="https://www.tiktok.com/@thermo.watch" target="_blank" title="TikTok" class="tiktok-link">🎵</a>
                         <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
                         <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
                         <a href="https://youtube.com" target="_blank" title="YouTube">📺</a>
@@ -234,26 +350,72 @@
         </div>
     </footer>
 
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5516997902081?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Thermo%20Watch" 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+            <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.293 1.422 1.412-5.27-0.322-0.532c-1.392-2.271-2.133-4.902-2.133-7.603 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14z"/>
+            <path fill="currentColor" d="M22.561 18.848c-0.347-0.173-2.051-1.013-2.369-1.129-0.318-0.115-0.549-0.173-0.78 0.173s-0.896 1.129-1.099 1.362c-0.202 0.231-0.405 0.26-0.751 0.087s-1.465-0.54-2.789-1.72c-1.031-0.92-1.727-2.055-1.929-2.402s-0.022-0.534 0.152-0.707c0.156-0.155 0.347-0.405 0.52-0.607s0.231-0.347 0.347-0.578c0.116-0.231 0.058-0.433-0.029-0.607s-0.78-1.88-1.069-2.574c-0.281-0.676-0.567-0.584-0.78-0.595-0.202-0.010-0.433-0.012-0.665-0.012s-0.607 0.087-0.925 0.433c-0.318 0.347-1.213 1.187-1.213 2.894s1.242 3.355 1.415 3.587c0.173 0.231 2.445 3.733 5.922 5.235 0.827 0.357 1.473 0.571 1.977 0.731 0.831 0.264 1.586 0.227 2.183 0.138 0.666-0.099 2.051-0.839 2.34-1.649s0.289-1.504 0.202-1.649c-0.087-0.144-0.318-0.231-0.665-0.405z"/>
+        </svg>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.js"></script>
     <script>
-        console.log('Script loaded');
+        // ======================
+        // DEBUG MODE ATIVADO
+        // ======================
+        console.log('%c🚀 THERMO WATCH - DEBUG MODE', 'background: #2563eb; color: white; padding: 10px; font-size: 16px; font-weight: bold;');
+        console.log('%c📅 Data/Hora:', 'color: #2563eb; font-weight: bold;', new Date().toLocaleString());
+        
+        console.log('\n%c[1/5] Verificando carregamento do script...', 'color: green; font-weight: bold;');
+        console.log('✅ Script loaded successfully');
         console.log('window.supabase:', window.supabase);
+        console.log('typeof window.supabase:', typeof window.supabase);
+        
         let supabase;
         try {
+            console.log('\n%c[2/5] Inicializando Supabase...', 'color: green; font-weight: bold;');
+            
             // Initialize Supabase
+            if (!window.supabase) {
+                throw new Error('❌ window.supabase não está disponível!');
+            }
+            
             const { createClient } = window.supabase;
-            console.log('createClient:', createClient);
-            supabase = createClient('https://qanyszslnactgtzpmtyj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg');
-            console.log('Supabase client:', supabase);
-            console.log('Supabase initialized');
+            console.log('createClient function:', createClient);
+            console.log('typeof createClient:', typeof createClient);
+            
+            if (typeof createClient !== 'function') {
+                throw new Error('❌ createClient não é uma função!');
+            }
+            
+            const supabaseUrl = 'https://qanyszslnactgtzpmtyj.supabase.co';
+            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFhbnlzenNsbmFjdGd0enBtdHlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NDg5ODAsImV4cCI6MjA3NzIyNDk4MH0.-8rGxn_gi_uVhvuRMbrieg8KahxpxmLmk77EwbL0WMg';
+            
+            console.log('Supabase URL:', supabaseUrl);
+            console.log('Supabase Key:', supabaseKey.substring(0, 20) + '...');
+            
+            supabase = createClient(supabaseUrl, supabaseKey);
+            
+            console.log('✅ Supabase client criado:', supabase);
+            console.log('Supabase client tipo:', typeof supabase);
+            console.log('✅ Supabase inicializado com sucesso!');
+            
         } catch (err) {
-            console.error('Failed to initialize Supabase:', err);
+            console.error('\n%c❌ ERRO AO INICIALIZAR SUPABASE!', 'background: red; color: white; padding: 5px; font-weight: bold;');
+            console.error('Detalhes do erro:', err);
+            console.error('Stack trace:', err.stack);
         }
+
+        console.log('\n%c[3/5] Configurando formulários...', 'color: green; font-weight: bold;');
 
         // Handle contact form submission
         document.querySelector('.contact-form').addEventListener('submit', async function(e) {
-            console.log('Contact form submitted');
+            console.log('\n%c📧 FORMULÁRIO DE CONTATO ENVIADO', 'background: blue; color: white; padding: 5px;');
             e.preventDefault();
+            
             const formData = new FormData(this);
             const data = {
                 name: formData.get('name'),
@@ -261,15 +423,26 @@
                 phone: formData.get('phone'),
                 message: formData.get('message')
             };
+            
+            console.log('Dados do formulário:', data);
+            
             try {
-                const { error } = await supabase
+                console.log('Enviando para Supabase...');
+                const { data: result, error } = await supabase
                     .from('contacts')
                     .insert([data]);
-                if (error) throw error;
-                alert('Mensagem enviada com sucesso!');
+                    
+                if (error) {
+                    console.error('❌ Erro do Supabase:', error);
+                    throw error;
+                }
+                
+                console.log('✅ Resposta do Supabase:', result);
+                alert('✅ Mensagem enviada com sucesso!');
                 this.reset();
+                console.log('Formulário resetado');
             } catch (err) {
-                console.error('Error:', err);
+                console.error('❌ Erro ao enviar:', err);
                 alert('Erro ao enviar mensagem.');
             }
         });
@@ -295,46 +468,351 @@
 
         // Initialize Google Map
         async function initMap() {
+            console.log('🗺️ Iniciando mapa...');
+            
+            // Remover loading
+            const loadingEl = document.getElementById('map-loading');
+            if (loadingEl) {
+                loadingEl.style.display = 'none';
+            }
+            
             // Center the map on Ribeirão Preto, SP
             const ribeiraoPreto = { lat: -21.1783, lng: -47.8065 };
             const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
+                zoom: 7,
                 center: ribeiraoPreto,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true,
             });
 
-            // Fetch partners from Supabase
-            try {
-                const { data: partners, error } = await supabase
-                    .from('partners')
-                    .select('name, lat, lng');
-                if (error) throw error;
+            console.log('✅ Mapa criado');
 
-                // Add markers for each partner
-                partners.forEach(partner => {
-                    new google.maps.Marker({
-                        position: { lat: partner.lat, lng: partner.lng },
-                        map: map,
-                        title: partner.name,
+            // InfoWindow para mostrar detalhes
+            const infoWindow = new google.maps.InfoWindow();
+
+            // Ícones personalizados
+            const iconPF = {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: '#2563eb',
+                fillOpacity: 1,
+                strokeColor: '#ffffff',
+                strokeWeight: 2,
+                scale: 10,
+            };
+
+            const iconPJ = {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: '#dc2626',
+                fillOpacity: 1,
+                strokeColor: '#ffffff',
+                strokeWeight: 2,
+                scale: 12,
+            };
+
+            // Buscar parceiros do banco de dados
+            let parceirosComCoordenadas = [];
+            
+            try {
+                console.log('🔍 Buscando parceiros do banco de dados...');
+                
+                if (!supabase) {
+                    console.warn('⚠️ Supabase não inicializado');
+                    throw new Error('Supabase não disponível');
+                }
+                
+                const { data: parceiros, error } = await supabase
+                    .from('parceiros')
+                    .select('id, nome, cpf_cnpj, endereco, telefone, email, tipo, lat, lng, ativo, percentual_padrao')
+                    .eq('ativo', true);
+
+                if (error) {
+                    console.error('❌ Erro ao buscar parceiros:', error);
+                    throw error;
+                }
+
+                console.log(`📊 ${parceiros?.length || 0} parceiros encontrados`);
+
+                // Função para geocodificar endereço
+                const geocodeAddress = async (address) => {
+                    return new Promise((resolve, reject) => {
+                        const geocoder = new google.maps.Geocoder();
+                        geocoder.geocode({ address: address + ', Brasil', region: 'BR' }, (results, status) => {
+                            if (status === 'OK' && results[0]) {
+                                resolve({
+                                    lat: results[0].geometry.location.lat(),
+                                    lng: results[0].geometry.location.lng()
+                                });
+                            } else {
+                                reject(new Error(`Geocoding falhou: ${status}`));
+                            }
+                        });
                     });
-                });
+                };
+
+                // Processar parceiros e obter coordenadas
+                if (parceiros && parceiros.length > 0) {
+                    for (const parceiro of parceiros) {
+                        let lat = parceiro.lat;
+                        let lng = parceiro.lng;
+
+                        // Se não tiver coordenadas mas tiver endereço, geocodificar
+                        if ((!lat || !lng) && parceiro.endereco) {
+                            console.log(`🔍 Geocodificando: ${parceiro.nome}`);
+                            try {
+                                const coords = await geocodeAddress(parceiro.endereco);
+                                lat = coords.lat;
+                                lng = coords.lng;
+                                console.log(`✅ Coordenadas: ${lat}, ${lng}`);
+                                
+                                // Salvar coordenadas no banco
+                                await supabase
+                                    .from('parceiros')
+                                    .update({ lat: lat, lng: lng })
+                                    .eq('id', parceiro.id);
+                                
+                                console.log('✅ Coordenadas salvas no banco');
+                            } catch (geoError) {
+                                console.warn(`⚠️ Erro ao geocodificar ${parceiro.nome}:`, geoError.message);
+                                continue;
+                            }
+                        }
+
+                        // Adicionar se tiver coordenadas válidas
+                        if (lat && lng) {
+                            parceirosComCoordenadas.push({ ...parceiro, lat, lng });
+                        } else {
+                            console.warn(`⚠️ ${parceiro.nome} sem endereço ou coordenadas`);
+                        }
+                    }
+                }
+
+                console.log(`📍 ${parceirosComCoordenadas.length} parceiros com localização válida`);
+
             } catch (err) {
-                console.error('Error fetching partners:', err);
-                // Fallback to example partners if table doesn't exist
-                const fallbackPartners = [
-                    { lat: -21.1783, lng: -47.8065, title: 'Thermo Watch - Ribeirão Preto' },
-                    { lat: -21.1378, lng: -47.9908, title: 'Parceiro 1 - Sertãozinho' },
-                    { lat: -20.8197, lng: -49.3794, title: 'Parceiro 2 - São José do Rio Preto' },
-                    { lat: -22.9068, lng: -47.0616, title: 'Parceiro 3 - Campinas' },
+                console.error('❌ Erro ao processar parceiros:', err);
+                console.log('📍 Usando dados de exemplo...');
+                
+                // Dados de exemplo como fallback
+                parceirosComCoordenadas = [
+                    {
+                        nome: 'Thermo Watch - Matriz',
+                        tipo: 'pessoa_juridica',
+                        lat: -21.1783,
+                        lng: -47.8065,
+                        endereco: 'Rua Cleusa Aparecida da Cunha Januário, 180 - Ribeirão Preto, SP',
+                        telefone: '+55 16 997902081',
+                        email: 'thermowatchrpsp@gmail.com',
+                        percentual_padrao: 0,
+                        exemplo: true
+                    },
+                    {
+                        nome: 'Revenda Sertãozinho',
+                        tipo: 'pessoa_fisica',
+                        lat: -21.1378,
+                        lng: -47.9908,
+                        endereco: 'Sertãozinho - SP',
+                        telefone: '+55 16 99999-0001',
+                        percentual_padrao: 15,
+                        exemplo: true
+                    },
+                    {
+                        nome: 'Parceiro São José do Rio Preto',
+                        tipo: 'pessoa_juridica',
+                        lat: -20.8197,
+                        lng: -49.3794,
+                        endereco: 'São José do Rio Preto - SP',
+                        telefone: '+55 17 99999-0002',
+                        percentual_padrao: 20,
+                        exemplo: true
+                    }
                 ];
-                fallbackPartners.forEach(partner => {
-                    new google.maps.Marker({
-                        position: { lat: partner.lat, lng: partner.lng },
-                        map: map,
-                        title: partner.title,
-                    });
-                });
             }
+            
+            console.log(`✅ ${parceirosComCoordenadas.length} parceiros para exibir`);
+            
+            // Adicionar marcadores no mapa
+            console.log(`🗺️ Adicionando ${parceirosComCoordenadas.length} marcadores ao mapa...`);
+            
+            parceirosComCoordenadas.forEach((parceiro, index) => {
+                console.log(`[${index + 1}/${parceirosComCoordenadas.length}] ${parceiro.nome}`);
+                
+                const marker = new google.maps.Marker({
+                    position: { lat: parceiro.lat, lng: parceiro.lng },
+                    map: map,
+                    title: parceiro.nome,
+                    icon: parceiro.tipo === 'pessoa_juridica' ? iconPJ : iconPF,
+                    animation: google.maps.Animation.DROP,
+                });
+
+                // Criar conteúdo do InfoWindow
+                const tipoParceiro = parceiro.tipo === 'pessoa_juridica' ? 'Pessoa Jurídica' : 'Pessoa Física';
+                const comissao = parceiro.percentual_padrao ? `${parceiro.percentual_padrao}%` : 'Não definida';
+                const exemploBadge = parceiro.exemplo ? `
+                    <p style="margin: 10px 0 0 0; padding: 8px; background: #fef3c7; border-radius: 5px; font-size: 12px; color: #92400e;">
+                        <strong>ℹ️ Dados de Exemplo</strong><br>
+                        Cadastre parceiros no banco para exibir dados reais.
+                    </p>
+                ` : '';
+                
+                const contentString = `
+                    <div style="padding: 10px; max-width: 300px;">
+                        <h3 style="margin: 0 0 10px 0; color: #2563eb; font-size: 18px;">
+                            ${parceiro.tipo === 'pessoa_juridica' ? '🏢' : '👤'} ${parceiro.nome}
+                        </h3>
+                        <div style="font-size: 14px; line-height: 1.6;">
+                            <p style="margin: 5px 0;"><strong>Tipo:</strong> ${tipoParceiro}</p>
+                            ${parceiro.cpf_cnpj ? `<p style="margin: 5px 0;"><strong>${parceiro.tipo === 'pessoa_juridica' ? 'CNPJ' : 'CPF'}:</strong> ${parceiro.cpf_cnpj}</p>` : ''}
+                            ${parceiro.endereco ? `<p style="margin: 5px 0;"><strong>📍 Endereço:</strong> ${parceiro.endereco}</p>` : ''}
+                            ${parceiro.telefone ? `<p style="margin: 5px 0;"><strong>📱 Telefone:</strong> <a href="tel:${parceiro.telefone}">${parceiro.telefone}</a></p>` : ''}
+                            ${parceiro.email ? `<p style="margin: 5px 0;"><strong>📧 E-mail:</strong> <a href="mailto:${parceiro.email}">${parceiro.email}</a></p>` : ''}
+                            <p style="margin: 5px 0;"><strong>💰 Comissão:</strong> ${comissao}</p>
+                            ${exemploBadge}
+                        </div>
+                    </div>
+                `;
+
+                // Adicionar evento de clique no marcador
+                marker.addListener('click', () => {
+                    infoWindow.setContent(contentString);
+                    infoWindow.open(map, marker);
+                });
+            });
+
+            // Ajustar zoom para mostrar todos os marcadores
+            if (parceirosComCoordenadas.length > 1) {
+                const bounds = new google.maps.LatLngBounds();
+                parceirosComCoordenadas.forEach(parceiro => {
+                    bounds.extend({ lat: parceiro.lat, lng: parceiro.lng });
+                });
+                map.fitBounds(bounds);
+            } else if (parceirosComCoordenadas.length === 1) {
+                map.setCenter({ lat: parceirosComCoordenadas[0].lat, lng: parceirosComCoordenadas[0].lng });
+                map.setZoom(12);
+            }
+
+            // Adicionar legenda ao mapa
+            const temExemplo = parceirosComCoordenadas.some(p => p.exemplo);
+            const legend = document.createElement('div');
+            legend.innerHTML = `
+                <div style="background: white; padding: 15px; margin: 10px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
+                    <h4 style="margin: 0 0 10px 0; font-size: 14px; font-weight: bold;">📍 Legenda</h4>
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <div style="width: 16px; height: 16px; background: #2563eb; border-radius: 50%; margin-right: 8px; border: 2px solid white;"></div>
+                        <span style="font-size: 12px;">Pessoa Física</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: ${temExemplo ? '10px' : '0'};">
+                        <div style="width: 20px; height: 20px; background: #dc2626; border-radius: 50%; margin-right: 8px; border: 2px solid white;"></div>
+                        <span style="font-size: 12px;">Pessoa Jurídica</span>
+                    </div>
+                    ${temExemplo ? `<div style="padding: 8px; background: #fef3c7; border-radius: 5px;">
+                        <p style="margin: 0; font-size: 11px; color: #92400e;">
+                            <strong>ℹ️ Dados de Exemplo</strong><br>
+                            ${parceirosComCoordenadas.length} parceiro(s) de demonstração
+                        </p>
+                    </div>` : `<p style="margin: 10px 0 0 0; font-size: 11px; color: #666;">Total: ${parceirosComCoordenadas.length} parceiro(s)</p>`}
+                </div>
+            `;
+            map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+            
+            console.log('✅ Mapa carregado com sucesso!');
         }
+
+        console.log('✅ Função initMap definida!');
+
+        console.log('\n%c[5/5] Configurando interações de redes sociais...', 'color: green; font-weight: bold;');
+
+        // Social Media Follow Buttons Interaction
+        const followInstagramBtn = document.getElementById('followInstagramBtn');
+        const followTikTokBtn = document.getElementById('followTikTokBtn');
+        const socialPosts = document.querySelectorAll('.social-post');
+        
+        // Instagram button interaction
+        if (followInstagramBtn) {
+            followInstagramBtn.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+                console.log('Instagram follow button clicked');
+            });
+
+            followInstagramBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+
+            followInstagramBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        }
+
+        // TikTok button interaction
+        if (followTikTokBtn) {
+            followTikTokBtn.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 100);
+                console.log('TikTok follow button clicked');
+            });
+
+            followTikTokBtn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+
+            followTikTokBtn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        }
+
+        // Social Posts Click Interaction
+        socialPosts.forEach(post => {
+            post.addEventListener('click', function() {
+                const platform = this.getAttribute('data-platform');
+                if (platform === 'instagram') {
+                    window.open('https://www.instagram.com/thermo.watch?igsh=MTFkNDNxcWpiMjVtOA==', '_blank');
+                } else if (platform === 'tiktok') {
+                    window.open('https://www.tiktok.com/@thermo.watch', '_blank');
+                }
+            });
+        });
+
+        // Smooth scroll for social media section in navigation
+        document.querySelectorAll('a[href="#social"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('social').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // WhatsApp Float Button Interaction
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+        if (whatsappFloat) {
+            whatsappFloat.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.15)';
+            });
+
+            whatsappFloat.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+
+            whatsappFloat.addEventListener('click', function(e) {
+                console.log('📱 WhatsApp button clicked');
+                // Analytics tracking can be added here
+            });
+        }
+
+        // WhatsApp Link Tracking
+        document.querySelectorAll('.whatsapp-link').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('💬 WhatsApp contact link clicked');
+                // Analytics tracking can be added here
+            });
+        });
+
+        console.log('✅ WhatsApp integração ativada!');
     </script>
 </body>
 </html>
