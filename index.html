@@ -118,21 +118,21 @@
                             <span class="info-icon">📧</span>
                             <div>
                                 <strong>E-mail</strong>
-                                <p>contato@thermowatch.com</p>
+                                <p>thermowatchrpsp@gmail.com</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">📱</span>
                             <div>
                                 <strong>Telefone</strong>
-                                <p>+55 (11) 98765-4321</p>
+                                <p>+55 16 997902081</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <span class="info-icon">📍</span>
                             <div>
                                 <strong>Endereço</strong>
-                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                                <p>Rua Cleusa Aparecida da Cunha Januário, nº 180, Bairro Recreio das Acácias, Ribeirão Preto - SP</p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -143,18 +143,18 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" action="/contact" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Seu Nome" required>
+                            <input type="text" name="name" placeholder="Seu Nome" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Seu E-mail" required>
+                            <input type="email" name="email" placeholder="Seu E-mail" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Seu Telefone" required>
+                            <input type="tel" name="phone" placeholder="Seu Telefone" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="submit-button">Enviar Mensagem</button>
                     </form>
@@ -167,8 +167,8 @@
                 <div class="newsletter-content">
                     <h3>📬 Assine Nossa Newsletter</h3>
                     <p>Receba novidades, dicas e atualizações direto no seu e-mail</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Seu melhor e-mail" required>
+                    <form class="newsletter-form" action="/newsletter" method="POST">
+                        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
                         <button type="submit">Inscrever-se</button>
                     </form>
                 </div>
@@ -224,5 +224,58 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Handle contact form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                message: formData.get('message')
+            };
+            fetch('/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.success) {
+                    this.reset();
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Erro ao enviar mensagem. Tente novamente.');
+            });
+        });
+
+        // Handle newsletter form submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = { email: formData.get('email') };
+            fetch('/newsletter', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.success) {
+                    this.reset();
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Erro ao inscrever na newsletter. Tente novamente.');
+            });
+        });
+    </script>
 </body>
 </html>
