@@ -48,7 +48,6 @@ header {
 }
 
 .logo {
-    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -140,7 +139,7 @@ header {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
@@ -515,7 +514,7 @@ footer {
 .social-media-section .section-title {
     color: var(--white);
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .social-intro {
@@ -766,7 +765,7 @@ footer {
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .features-grid {
