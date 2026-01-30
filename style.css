@@ -47,9 +47,9 @@ header {
     align-items: center;
 }
 
-.logo h1 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
+.logo img {
+    height: 2rem;
+    width: auto;
 }
 
 .nav-menu {
