@@ -14,6 +14,10 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -279,6 +283,7 @@ header {
 .contact {
     padding: 80px 0;
     background: var(--white);
+    scroll-margin-top: 100px;
 }
 
 .contact-wrapper {
