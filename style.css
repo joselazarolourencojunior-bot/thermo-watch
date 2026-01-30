@@ -761,6 +761,24 @@ footer {
         gap: 1rem;
     }
     
+    .logo {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo img {
+        height: 4rem;
+        padding: 0.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
     .hero-content h2 {
         font-size: 2rem;
     }
